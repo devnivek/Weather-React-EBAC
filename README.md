@@ -7,3 +7,4 @@ Funções implementadas:
 - Informa a cidade, estado e país do local que está exibindo
 - Exibe a mensagem "Beba Água" se a humidade do ar estiver menor que 60%
 - Mostra quando foi última atualização sobre o clima
+- Ao clicar no nome do Dev no rodapé irá abrir a página do Porfólio desenvolvido em outro Workshop da EBAC :)

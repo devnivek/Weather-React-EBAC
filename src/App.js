@@ -1,33 +1,4 @@
 import React, { useState } from "react";
-/*
-Olá tudo bem? 
-
-Então vamos lá vou deixar esse desafio pra você.
-
-Quero que você melhore a usabilidade do nosso verificador de clima.
-
-Estava pensando aqui e precisamos das seguintes melhorias:
-
-Mostrar para o usuário de alguma maneira que estamos buscando a informação
-meteorologia da cidade dele, acho que precisamos de um "loading", o que acha?
-Que tal escrever "Buscando..." dentro do botão enquanto a requisição esta sendo feita?
-
-Seria legal também a gente mostrar para o usuário a cidade e estado dele,
-pra ele ter certeza que estamos mostrando a previsão do tempo da cidade correta, o que acha?
-
-Podemos também limpar o campo de busca após a busca ser realizada! Isso melhora a usabilidade
-do nosso sistema.
-
-O que acha de informamos o usuário quando a cidade não for encontrada ou tivermos algum 
-erro na nossa requisição? Legal ne?
-
-E por último temos varias outras informações que podemos mostrar para o usuário,
-como por exemplo, visibilidade, sensação termica, humidade, velocidade do vento.
-
-Vamos listras alguma dessas informações para o usuário? Sinta-se a vontade para modificar
-o layout como você quiser!!
-
-*/
 
 function App() {
   const [city, setCity] = useState("");
@@ -125,7 +96,7 @@ Temperatura atual: {weatherForecast.current.temp_c}ºC <br></br><h6>Humidade do 
           ) : null}
         </div>
         <div class="rodape bg-primary text-center py-3">
-          <span class="text-light"> © 2021 - Desenvolvido por <a href="https://github.com/devnivek" title="Visite meu gitHub" target="_blank" class="link">Kevin Santos </a></span>
+          <span class="text-light"> © 2021 - Desenvolvido por <a href="https://devnivek.github.io/portfolio/" title="Confira meu projeto Portfólio ;)" target="_blank" class="link">Kevin Santos</a></span>
         </div>
       </main>
     </>
