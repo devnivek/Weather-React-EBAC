@@ -124,7 +124,7 @@ Temperatura atual: {weatherForecast.current.temp_c}ºC <br></br><h6>Humidade do 
             </>
           ) : null}
         </div>
-        <div class="footer-copyright bg-primary text-center py-3">
+        <div class="rodape bg-primary text-center py-3">
           <span class="text-light"> © 2021 - Desenvolvido por <a href="https://github.com/devnivek" title="Visite meu gitHub" target="_blank" class="link">Kevin Santos </a></span>
         </div>
       </main>
