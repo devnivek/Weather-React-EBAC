@@ -94,7 +94,7 @@ function App() {
 
           {weatherForecast ? (
             <>
-              <div className="mt-4 d-flex align-items-center">
+              <div className="mt-4 d-flex align-items-center clima">
                 <div className="col-sm-1">
                   <img
                     src={`${weatherForecast.current.condition.icon}`}
@@ -112,7 +112,7 @@ function App() {
                   </h3>
                   <p className="lead text-primary">
                   <i class="fa fa-thermometer-three-quarters mr-2" aria-hidden="true"></i>
-Temperatura atual: {weatherForecast.current.temp_c}ºC <br></br><h6>Humidade do ar em {weatherForecast.current.humidity}% - Beba água!</h6>
+Temperatura atual: {weatherForecast.current.temp_c}ºC <br></br><h6>Humidade do ar em {weatherForecast.current.humidity}% {weatherForecast.current.humidity >= 60 ? "- Tudo Ok!" : "- Beba Água!"}</h6>
                   </p>
                   <small class="text-muted"><i class="fa fa-clock-o mr-2" aria-hidden="true"></i>atualizado em {weatherForecast.current.last_updated}</small>
                 </div>
