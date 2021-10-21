@@ -70,7 +70,7 @@ function App() {
       </div>
 
       <main className="container" id="search">
-        <div className="jumbotron bg-white">
+        <div className="jumbotron text-white">
           <h1>Veja agora o clima atual de qualquer local! </h1>
           
           <p className="lead">
