@@ -49,7 +49,7 @@ function App() {
         }
         else{
           setCity("");
-          setErro(<i class="fa fa-exclamation-triangle ml-3 mt-4" aria-hidden="true"><p class="erro">Ops, cidade não encontrada! tente novamente.</p></i>)
+          setErro(<i class="fa fa-exclamation-triangle ml-2 mt-4" aria-hidden="true"><a class="erro ml-2">Ops, cidade não encontrada! tente novamente.</a></i>)
         }
       })
       .then((data) => {
@@ -63,34 +63,38 @@ function App() {
     <>
       <div>
         <nav className="navbar navbar-expand-md navbar-dark bg-transparent mb-4">
-          <a className="navbar-brand " href="#search">
-          <i class="fa fa-cloud mr-2" aria-hidden="true"></i> Consulta Clima
+          <a className="navbar-brand " href="https://github.com/devnivek/Weather-React-EBAC">
+          <i class="fa fa-cloud mr-2" aria-hidden="true"></i> Como está o Clima?
           </a>
         </nav>
       </div>
-
+      <br></br>
       <main className="container" id="search">
         <div className="jumbotron text-white">
-          <h1>Veja agora o clima atual de qualquer local! </h1>
+          <h1><i class="fa fa-sun-o mr-2 text-warning" aria-hidden="true"></i>Confira o clima atual de qualquer lugarl! </h1>
           
           <p className="lead">
-            Digite uma cidade no campo abaixo em seguida
-            clique em pesquisar.
+            Digite um local no campo abaixo e clique em pesquisar ;)
           </p>
           <div className="row mb-4">
             <div class="col-md-6">
               <input
                 type="text"
-                class="form-control"
+                class="form-control h-100"
                 value={city}
+                placeholder="qual cidade deseja?"
                 onChange={(e) => setCity(e.target.value)}
               />
             </div>
-          </div>
-          <button className="btn btn-lg btn-primary" onClick={handleSearch}>
+            <div>
+            <button className="btn btn-lg btn-primary h-100" onClick={handleSearch}>
             {load? "Buscando ..." : <i class="fa fa-search" aria-hidden="true"><a class="ml-2">Pesquisar</a></i>}
           </button>
-          <p class="erro">{erro}</p>
+            </div>
+
+          </div>
+          
+          <p class="erro mt-4">{erro}</p>
 
           {weatherForecast ? (
             <>
@@ -104,11 +108,11 @@ function App() {
                 <div>
                   <br></br>
                   <h6 class="text-info">
-                    <i class="fa fa-globe mr-2" aria-hidden="true"></i>Você está em {weatherForecast.location.name}, {weatherForecast.location.region} - {weatherForecast.location.country}
+                    <i class="fa fa-globe mr-2" aria-hidden="true"></i>Você está vendo {weatherForecast.location.name}, {weatherForecast.location.region} - {weatherForecast.location.country}
                   </h6>
                   <hr></hr>
                   <h3>
-                    Hoje o dia está: {weatherForecast.current.condition.text}
+                    Hoje o dia está {weatherForecast.current.condition.text}
                   </h3>
                   <p className="lead text-primary">
                   <i class="fa fa-thermometer-three-quarters mr-2" aria-hidden="true"></i>
@@ -120,9 +124,9 @@ Temperatura atual: {weatherForecast.current.temp_c}ºC <br></br><h6>Humidade do 
             </>
           ) : null}
         </div>
-        <div class="footer-copyright bg-info text-center py-3">
-      <span class="text-light"> © 2021 - Desenvolvido por <a href="https://github.com/devnivek" title="Visite meu gitHub" class="link">Kevin Santos </a></span>
-    </div>
+        <div class="footer-copyright bg-primary text-center py-3">
+          <span class="text-light"> © 2021 - Desenvolvido por <a href="https://github.com/devnivek" title="Visite meu gitHub" target="_blank" class="link">Kevin Santos </a></span>
+        </div>
       </main>
     </>
   );
